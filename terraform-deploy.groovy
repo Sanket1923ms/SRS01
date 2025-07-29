@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'JAVA'}
     parameters {
         string(name: 'GIT_REPO_URL', defaultValue: 'https://github.com/COL-Software-Institute/col-june-fastrack.git')
         choice(name: 'ACTION', choices: ['init','plan','apply','destroy'])
